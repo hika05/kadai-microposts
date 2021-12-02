@@ -13,6 +13,7 @@
                 {{-- 投稿一覧 --}}
                 @include('microposts.microposts')
             </div>
+            
         </div>
     @else
         <div class="center jumbotron">
