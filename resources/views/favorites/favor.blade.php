@@ -15,6 +15,7 @@
                         {{-- 投稿内容 --}}
                         <p class="mb-0">{!! nl2br(e($favorite->content)) !!}</p>
                     </div>
+                      @include('favorites.favoring_button')
                     <div>
                         @if (Auth::id() == $favorite->user_id)
                             {{-- 投稿削除ボタンのフォーム --}}
@@ -23,6 +24,7 @@
                             {!! Form::close() !!}
                         @endif
                     </div>
+                
                 </div>
             </li>
         @endforeach

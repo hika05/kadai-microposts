@@ -13,6 +13,7 @@
             {{-- お気に入り一覧 --}}
             @include('favorites.favor')
             
+            
         </div>
     </div>
 @endsection
