@@ -17,9 +17,9 @@
                     </div>
                       @include('favorites.favoring_button')
                     <div>
-                        @if (Auth::id() == $favorite->user_id)
+                       @if (Auth::id() == $favorite->user_id)
                             {{-- 投稿削除ボタンのフォーム --}}
-                            {!! Form::open(['route' => ['favorites.unfavorite', $favorite->id], 'method' => 'delete']) !!}
+                            {!! Form::open(['route' => ['microposts.destroy', $favorite->id], 'method' => 'delete']) !!}
                                 {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
                             {!! Form::close() !!}
                         @endif
